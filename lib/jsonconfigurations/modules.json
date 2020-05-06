@@ -1,0 +1,27 @@
+[
+    {
+        "module_name" : "login",
+        "file_path" : "classesmodule/class.module.login.php",
+        "class_name" : "login"
+    },
+    {
+        "module_name" : "userProfile",
+        "file_path" : "classesmodule/class.module.userProfile.php",
+        "class_name" : "userProfile"
+    },
+    {
+        "module_name" : "application",
+        "file_path" : "classesmodule/class.module.application.php",
+        "class_name" : "application"
+    },
+    {
+        "module_name" : "mailer",
+        "file_path" : "classesmodule/class.module.mailer.php",
+        "class_name" : "mailer"
+    },
+    {
+        "module_name" : "download",
+        "file_path" : "classesmodule/class.module.download.php",
+        "class_name" : "download"
+    }
+]
