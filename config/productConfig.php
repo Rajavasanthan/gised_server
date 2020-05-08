@@ -11,11 +11,11 @@ define('MODULES_PATH', 'lib/jsonconfigurations/modules.json');
 define('MAILS_PATH', 'lib/jsonconfigurations/mails.json');
 
 //Product url link
-define('PRODUCT_LINK', 'http://localhost:4200');
-define('BACKEND_PRODUCT_LINK', 'http://localhost/gised/src/app/server/');
+define('PRODUCT_LINK', 'http://gised.cyferx.com/ngadmin');
+define('BACKEND_PRODUCT_LINK', 'http://gised.cyferx.com/backend/');
 
 //Password and forgot password url link
-define('SET_PASSWORD_LINK', 'http://localhost:4200/setpassword/');
+define('SET_PASSWORD_LINK', 'http://gised.cyferx.com/ngadmin/#/setpassword/');
 
 //Mail settings
 define('SMTP_HOST', 'smtp.gmail.com');
