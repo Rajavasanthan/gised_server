@@ -12,6 +12,7 @@ define('MAILS_PATH', 'lib/jsonconfigurations/mails.json');
 
 //Product url link
 define('PRODUCT_LINK', 'http://localhost:4200');
+define('BACKEND_PRODUCT_LINK', 'http://localhost/gised/src/app/server/');
 
 //Password and forgot password url link
 define('SET_PASSWORD_LINK', 'http://localhost:4200/setpassword/');
@@ -33,5 +34,8 @@ define('USER_UPLOAD_PATH', '../uploads/useruploads/');
 
 //User downloads file path
 define('USER_DOWNLOAD_PATH', '../uploads/useruploads/');
+
+//User profile picture path
+define('USER_PROFILE_PICTURE_PATH', 'uploads/profileuploads/');
 
 ?>
