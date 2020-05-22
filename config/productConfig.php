@@ -12,7 +12,7 @@ define('MAILS_PATH', 'lib/jsonconfigurations/mails.json');
 
 //Product url link
 define('PRODUCT_LINK', 'http://gised.cyferx.com/ngadmin');
-define('BACKEND_PRODUCT_LINK', 'http://gised.cyferx.com/backend/');
+define('BACKEND_PRODUCT_LINK', 'http://103.233.1.236/plesk-site-preview/backend.cyferx.com/https/103.233.1.236/');
 
 //Password and forgot password url link
 define('SET_PASSWORD_LINK', 'http://gised.cyferx.com/ngadmin/#/setpassword/');
