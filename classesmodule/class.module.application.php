@@ -49,7 +49,8 @@
         function approverProcessAction() {
 
             if($this->input['process'] == "APPROVE") {
-                $this->updateApproverAction($this->input['statusTrackingDetailsId'], 1, $this->input['approvalBy']);
+                $status = ($this->input['presentFormNo'] == 4) ? 5 : 1 ;
+                $this->updateApproverAction($this->input['statusTrackingDetailsId'], $status, $this->input['approvalBy']);
             } else if($this->input['process'] == "REJECT") {
                 $this->updateApproverAction($this->input['statusTrackingDetailsId'], 6, $this->input['approvalBy']);
             } else if($this->input['process'] == "DRAFT") {
@@ -68,7 +69,7 @@
             $trackObj->r_gised_id = ($this->input['process'] == 'REJECT') ? $this->input['gisedId'] : 0 ;
             $trackObj->status_tracking_details_id = ($this->input['process'] == 'REJECT') ? 0 : $factStatusTrackingId ;
             $trackObj->status = ($this->input['process'] == 'REJECT') ? 'N' : 'Y' ;
-            $trackObj->r_status_id = ($this->input['presentFormNo'] == 4) ? 5 : $status ;
+            $trackObj->r_status_id = $status ;
             $trackObj->approval_by = $approvalBy;
             $sql = $trackObj->updatefactstatustrackingdetails();
             $result = dbConnection::updateQuery($sql);
@@ -77,7 +78,7 @@
             $gisedObj = new dmgisedform();
             $gisedObj->gised_form_id = $this->input['gisedId'];
             $gisedObj->r_user_id = $this->input['userId'];
-            $gisedObj->r_status_id = ($this->input['presentFormNo'] == 4) ? 5 : $status ;
+            $gisedObj->r_status_id = $status ;
             if($status == 6) {
                 $gisedObj->status = 'N'; 
             } else if($status == 1 && $this->input['presentFormNo'] == 4) {
