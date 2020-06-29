@@ -18,6 +18,8 @@ class dmuser {
     var $r_state_id;
     var $r_country_id;
     var $field_of_activity;
+    var $organization_name;
+    var $r_country_id_registerd;
     var $date_of_foundation;
     var $created_date_time;
     var $updated_date_time;
@@ -38,6 +40,8 @@ class dmuser {
         $this->r_state_id = 0;
         $this->r_country_id = 1;
         $this->field_of_activity = '0';
+        $this->organization_name = '';
+        $this->r_country_id_registerd = 1;
         $this->date_of_foundation = '0000-00-00';
         $this->created_date_time = '0000-00-00 00:00:00';
         $this->updated_date_time = '0000-00-00 00:00:00';
@@ -60,6 +64,8 @@ class dmuser {
                                              $this->r_state_id,
                                              $this->r_country_id,
                                             '$this->field_of_activity',
+                                            '$this->organization_name',
+                                            '$this->r_country_id_registerd',
                                             '$this->date_of_foundation',
                                             '$this->created_date_time',
                                             '$this->updated_date_time'
@@ -207,6 +213,16 @@ class dmuser {
             $camaa = ', ';
         }
 
+        if($this->organization_name != '') {
+            $sql = $sql . $camaa." organization_name = '" . $this->organization_name . "'";
+            $camaa = ', ';
+        }
+
+        if($this->r_country_id_registerd != 1) {
+            $sql = $sql . $camaa." r_country_id_registerd = " . $this->r_country_id_registerd;
+            $camaa = ', ';
+        }
+        
         if($this->date_of_foundation != '0000-00-00') {
             $sql = $sql . $camaa." date_of_foundation = '" . $this->date_of_foundation . "'";
             $camaa = ', ';
