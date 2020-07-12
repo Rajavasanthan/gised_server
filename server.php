@@ -74,12 +74,10 @@ class serverController {
 			} else {
 				$this->jwtDecodeStatus = false;
 			}
-			$this->jwtDecodeStatus = true;
 
 		} else {
 
 			$this->jwtDecodeStatus = ($this->module['module_name'] == 'login') ? true : false ;
-			$this->jwtDecodeStatus = true;
 
 		}
 
@@ -93,10 +91,7 @@ class serverController {
 	}
 
 	function output() {
-		// print_r($this->angularResponse);exit;
 		$angularResponse["response"] = $this->commonObj->encryption(json_encode($this->angularResponse));
-		// $angularResponse["response"] = json_encode($this->angularResponse, JSON_UNESCAPED_UNICODE);
-		// header('Content-Type: text/html;charset=utf-8');
 		header("Access-Control-Allow-Origin: *");
 		header("Content-Type: application/json");
 		echo json_encode($angularResponse);
